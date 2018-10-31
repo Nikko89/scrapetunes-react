@@ -1,0 +1,132 @@
+.search-form {
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search-form-col {
+  flex-flow: column wrap;
+  width: 100%;
+  height: auto;
+}
+
+.search-form-row {
+  flex-flow: row wrap;
+}
+
+.search-form--input {
+  text-align: center;
+  margin: 20px 10px;
+  margin-bottom: 40px;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  border-image: linear-gradient(to right, #336b87, yellow);
+  border-image-slice: 1;
+  transition: all 0.6s;
+}
+.search-form--input:focus {
+  outline: 0;
+  background-color: black;
+  color: whitesmoke;
+}
+
+/* .search-form--input + span:before,
+.search-form--input:after {
+  transform: translate(0);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.2s;
+  border: 2px solid orange;
+}
+
+
+.search-form--input:focus:after {
+  -webkit-transform: translate(3px, 3px);
+  transform: translate(3px, 3px);
+}
+
+.search-form--input:focus:before {
+  -webkit-transform: translate(-3px, -3px);
+  transform: translate(-3px, -3px);
+}
+
+.search-form--input:not(:focus):before,
+.search-form--input:not(:focus):after {
+  transform: translate(0);
+}
+
+.search-form--input:focus:before,
+.search-form--input:focus:after {
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-image: linear-gradient(to right, yellow, #336b87);
+  border-image-slice: 1;
+} */
+
+#component-outlined {
+  text-align: center;
+}
+
+.jukebox-button {
+  width: 100%;
+  padding: 10px 25px;
+  background: none;
+  color: #000000;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.jukebox-button:hover {
+  background: black;
+  color: white;
+}
+
+.jukebox-button:before,
+.jukebox-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.2s;
+  border: 2px solid orange;
+}
+
+.jukebox-button:after {
+  transform: translate(3px, 3px);
+  border-color: #336b87;
+}
+
+.jukebox-button:focus {
+  outline: 0;
+}
+
+.jukebox-button:before {
+  transform: translate(-3px, -3px);
+}
+
+.jukebox-button:hover:before,
+.jukebox-button:hover:after {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-image: linear-gradient(
+    to right,
+    rgba(255, 166, 0, 0.623),
+    hsla(200, 45%, 36%, 0.555)
+  );
+  border-image-slice: 1;
+}
