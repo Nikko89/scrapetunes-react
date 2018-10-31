@@ -6,6 +6,7 @@ A project made for a coding challenge.
 
 React
 Webpack (CRA)
+Redux
 
 ## The challenge
 
