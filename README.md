@@ -20,3 +20,7 @@ Build a simple itunes scraper with a search functionality that fetches the first
 2. install dependencies:
 
 <pre>npm install </pre>
+
+3. run the project:
+
+<pre>npm start</pre>
