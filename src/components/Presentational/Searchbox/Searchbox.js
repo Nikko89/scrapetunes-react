@@ -14,7 +14,16 @@ export default class Searchbox extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.searchList(this.state.name);
+    fetch(
+      `https://itunes.apple.com/search?term=${
+        this.state.name
+      }&limit=25&entity=album`
+    )
+      .then(res => res.json())
+      .then(res => {
+        this.props.searchList(res);
+      });
+
     this.setState({
       name: ""
     });

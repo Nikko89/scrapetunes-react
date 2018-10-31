@@ -8,6 +8,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -26,7 +27,12 @@
   z-index: 100;
   flex-direction: column;
   margin: 25px;
-  padding-bottom: 20vh;
+}
+
+.home-box-reduced {
+  flex-direction: row;
+  z-index: 100;
+  justify-content: space-evenly;
 }
 
 .home-box h1 {

@@ -4,6 +4,9 @@ import Searchbox from "../Searchbox/Searchbox";
 import AlbumList from "../AlbumList/AlbumList";
 
 export default class Home extends Component {
+  componentWillReceiveProps() {
+    this.forceUpdate();
+  }
   render() {
     console.log(this.props);
     return (
@@ -13,12 +16,16 @@ export default class Home extends Component {
             <h1>Welcome!</h1>
             <p>Type in the box to start looking up some music </p>
           </header>
-          <Searchbox
-            searchList={this.props.searchList}
-            searchResults={this.props.searchResults}
-          />
+          <Searchbox searchList={this.props.searchList} />
         </div>
-        <AlbumList list={this.props.searchResults} />
+        {this.props.albumArray ? (
+          <React.Fragment>
+            <AlbumList listUrl={this.props.albumArray} />
+            <button className="bottomBtn" onClick={() => this.props.resetList}>
+              Reset
+            </button>
+          </React.Fragment>
+        ) : null}
       </div>
     );
   }

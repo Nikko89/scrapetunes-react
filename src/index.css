@@ -37,3 +37,7 @@ canvas {
 p {
   font-weight: 300;
 }
+
+.bottomBtn {
+  align-self: flex-end;
+}

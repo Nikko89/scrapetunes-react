@@ -5,4 +5,8 @@ export const searchList = query => ({
   query
 });
 
+export const resetList = () => ({
+  type: "KILL_QUERY"
+});
+
 // Favorites
