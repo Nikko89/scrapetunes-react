@@ -1,0 +1,22 @@
+.optionBtn {
+  cursor: pointer;
+  color: orange;
+  background: white;
+  margin: 0 10px;
+  height: 30px;
+  flex: 1 1 calc(33% - 20px);
+}
+
+.footer-options {
+  bottom: 0;
+  position: fixed;
+  z-index: 100;
+  background: orange;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 10px 20px;
+  justify-self: flex-end;
+}

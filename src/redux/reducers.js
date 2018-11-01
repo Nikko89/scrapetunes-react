@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
+import { ActionTranslate } from "material-ui/svg-icons";
 
-const resultsDisplay = (state = [], action) => {
+const fetchedMusic = (state = [], action) => {
   switch (action.type) {
     case "SEARCH_QUERY":
       return action.query.results;
@@ -12,19 +13,20 @@ const resultsDisplay = (state = [], action) => {
   }
 };
 
-/* const resultsDisplay = (state = "", action) => {
+const layoutState = (state = "verticalView", action) => {
+  let newState;
   switch (action.type) {
-    case "SEARCH_QUERY":
-      let newState = `https://itunes.apple.com/search?term=${
-        action.query
-      }&limit=25&entity=album`;
-      state = newState;
-      return state;
-    case "KILL_QUERY":
-      state = "";
-      return state;
+    case "VERTICAL_VIEW":
+      newState = "verticalView";
+      return newState;
+    case "GRID_VIEW":
+      newState = "gridView";
+      return newState;
     default:
       return state;
   }
-}; */
-export default resultsDisplay;
+};
+
+const reducers = combineReducers({ music: fetchedMusic, layout: layoutState });
+
+export default reducers;

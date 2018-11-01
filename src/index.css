@@ -31,13 +31,9 @@ html {
 }
 
 canvas {
-  z-index: 0;
+  z-index: -100;
 }
 
 p {
   font-weight: 300;
-}
-
-.bottomBtn {
-  align-self: flex-end;
 }

@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import Home from "../../Presentational/Home/Home";
 import ParticleBG from "../../Presentational/ParticleBG/ParticleBG";
 import { connect } from "react-redux";
-import { searchList, resetList } from "../../../redux/actions";
+import {
+  searchList,
+  resetList,
+  toGridView,
+  toVerticalView
+} from "../../../redux/actions";
 
 class Main extends Component {
   componentWillReceiveProps() {
@@ -15,8 +20,11 @@ class Main extends Component {
         <ParticleBG />
         <Home
           albumArray={this.props.albumArray}
+          layout={this.props.layout}
           searchList={this.props.searchList}
           resetList={this.props.resetList}
+          toGridView={this.props.toGridView}
+          toVerticalView={this.props.toVerticalView}
         />
       </React.Fragment>
     );
@@ -24,12 +32,15 @@ class Main extends Component {
 }
 
 const mapStateToProps = state => ({
-  albumArray: state
+  albumArray: state.music,
+  layout: state.layout
 });
 
 const mapDispatchToProps = dispatch => ({
   searchList: text => dispatch(searchList(text)),
-  resetList: () => dispatch(resetList())
+  resetList: () => dispatch(resetList()),
+  toGridView: () => dispatch(toGridView()),
+  toVerticalView: () => dispatch(toVerticalView())
 });
 export default connect(
   mapStateToProps,

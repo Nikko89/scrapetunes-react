@@ -9,4 +9,12 @@ export const resetList = () => ({
   type: "KILL_QUERY"
 });
 
+export const toGridView = () => ({
+  type: "GRID_VIEW"
+});
+
+export const toVerticalView = () => ({
+  type: "VERTICAL_VIEW"
+});
+
 // Favorites
