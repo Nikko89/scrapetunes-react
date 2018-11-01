@@ -6,6 +6,8 @@ A project made for a coding challenge.
 
 React
 Webpack (CRA)
+Redux
+iTunes API
 
 ## The challenge
 
@@ -13,7 +15,7 @@ Build a simple itunes scraper with a search functionality that fetches the first
 
 ## Do it Yourself
 
-1. clone the repository: 
+1. clone the repository:
 
 <pre>git clone https://github.com/Nikko89/scrapetunes-react *your-repo-name*</pre>
 
