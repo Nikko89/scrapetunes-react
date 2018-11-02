@@ -7,7 +7,7 @@
 }
 
 .search-form-col {
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   width: 100%;
   height: auto;
 }
@@ -28,7 +28,6 @@
   border-image: linear-gradient(to right, #336b87, yellow);
   border-image-slice: 1;
   transition: all 0.6s;
-  flex: 0 1 50%;
 }
 .search-form--input:focus {
   outline: 0;

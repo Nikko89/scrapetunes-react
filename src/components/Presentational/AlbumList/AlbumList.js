@@ -14,10 +14,11 @@ export default class AlbumList extends Component {
           {this.props.listUrl.map(album => {
             return (
               <div
+                key={album.collectionId + album.artistId}
                 className={
                   this.props.layoutState === "verticalView"
-                    ? "album-list--card-vert"
-                    : "album-list--card-grid"
+                    ? "album-list--card-vert album-list--card"
+                    : "album-list--card-grid album-list--card"
                 }>
                 <img
                   src={album.artworkUrl100}
@@ -29,7 +30,7 @@ export default class AlbumList extends Component {
                       ? album.collectionName.substring(0, 29) + "..."
                       : album.collectionName}
                   </h3>
-                  <b>{album.artistName}</b>
+                  <i>{album.artistName}</i>
                 </div>
               </div>
             );

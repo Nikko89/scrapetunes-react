@@ -10,6 +10,7 @@
     "react-particles-js": "^2.3.0",
     "react-redux": "^5.1.0",
     "react-scripts": "2.0.5",
+    "react-transition-group": "^1.2.1",
     "redux": "^4.0.1"
   },
   "scripts": {

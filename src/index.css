@@ -37,3 +37,7 @@ canvas {
 p {
   font-weight: 300;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 480px);

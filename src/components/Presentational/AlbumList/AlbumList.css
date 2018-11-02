@@ -1,7 +1,7 @@
 .album-container {
   width: 100%;
   height: 500px;
-  overflow: scroll;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   z-index: 100;
@@ -9,43 +9,82 @@
   padding: 10px 0;
 }
 
-.album-list--card-vert {
-  width: 90%;
-  display: flex;
-  flex-flow: row;
+.album-container::-webkit-scrollbar {
+  background-color: #336b87;
+  width: 1em;
+}
+
+.album-list--card-vert .album-details {
+  flex: 1 1 0%;
+}
+
+.album-list--card-vert img {
   margin: 0 auto;
+}
+
+.album-list--card {
+  display: flex;
+  flex-flow: row wrap;
   margin-top: 20px;
   margin-bottom: 20px;
   align-items: center;
+  justify-content: center;
+  height: 100px;
 }
 
 .album-list-grid {
   display: flex;
+  width: 90vw;
   flex-flow: row wrap;
 }
 
 .album-list-vert {
-  justify-content: flex-start;
-  align-items: flex-start;
   width: 90vw;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.album-list--card-grid {
+.album-list-grid .album-list--card-grid {
   display: flex;
   flex-flow: row;
-  margin: 15px;
-  flex: 1 1 calc(50% - 30px);
+  margin: 10px;
+  flex: 0 1 calc(33% - 20px);
   font-size: 0.8em;
   align-items: center;
+  padding: 15px 0;
+  justify-content: center;
+}
+
+.album-list--card-vert {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-flow: row nowrap;
 }
 
 .album-container img {
   height: 100%;
+  width: auto;
 }
 
 .album-details {
+  text-align: center;
   display: flex;
   flex-flow: column;
   align-items: center;
   flex: 1 1 100%;
+}
+
+.album-details h3 {
+  margin: 3px 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #336b87;
+}
+
+.album-details i {
+  margin: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }

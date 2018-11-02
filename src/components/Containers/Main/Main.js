@@ -14,7 +14,6 @@ class Main extends Component {
     setTimeout(this.forceUpdate(), 1500);
   }
   render() {
-    console.log("ewhiusfhewiurig", this.props);
     return (
       <React.Fragment>
         <ParticleBG />
